@@ -7,25 +7,23 @@ Este é um projeto Spring Boot 3 que utiliza o OpenFeign para comunicação de s
 ### Desenvolvimento
 
 - **URL Base do Serviço**: `http://localhost:8181/swagger-ui/index.html`
-- Configurações específicas do ambiente de desenvolvimento, como banco de dados local e logs detalhados, podem ser encontradas no arquivo `application-dev.properties`.
+- Configurações específicas do ambiente de desenvolvimento, como banco de dados local e logs detalhados, podem ser encontradas no arquivo `application-dev.yml`.
 
 ### Homologação
 
 - **URL Base do Serviço**: `http://localhost:8282/swagger-ui/index.html`
-- Configurações específicas do ambiente de homologação estão no arquivo `application-homolog.properties`.
+- Configurações específicas do ambiente de homologação estão no arquivo `application-hml.yml`.
 
 ### Produção
 
 - **URL Base do Serviço**: `http://localhost:8282/swagger-ui/index.html`
-- Configurações específicas do ambiente de produção estão no arquivo `application-prod.properties`.
+- Configurações específicas do ambiente de produção estão no arquivo `application-prd.yml`.
 
 ## Configurações
 
 As configurações gerais do aplicativo podem ser encontradas no arquivo `application.properties`. Aqui estão algumas das principais configurações:
 
-- **server.port**: Porta na qual o servidor será iniciado.
-- **spring.application.name**: Nome da aplicação Spring Boot.
-- **logging.level.root**: Nível de log raiz.
+- **spring.profiles.active: Variavel de ambiente (APPLICATION.AMBIENTE = dev, hml ou prd).
 
 ## OpenFeign
 
