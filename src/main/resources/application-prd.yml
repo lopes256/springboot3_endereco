@@ -1,0 +1,26 @@
+## YAML Template.
+---
+
+server:
+  port: 8181
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:8745/${E_DB_DATABASE_PRD}
+    username: postgres
+    password: ${E_DB_PASSWORD_DEV}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        package-to-scan: br.com.deltatgn.endereco.infrastructure.entities
+        format_sql: true
+        show_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: true

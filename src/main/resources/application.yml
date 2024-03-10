@@ -1,0 +1,7 @@
+## YAML Template.
+---
+spring:
+  profiles:
+    active: "${APPLICATION.AMBIENTE}"
+endereco-api:
+  url: https://viacep.com.br/ws
